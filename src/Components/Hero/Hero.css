@@ -1,0 +1,55 @@
+
+
+.highlight {
+  color: #ff4d4d; /* Or any accent color from the Emma Watson site */
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: transparent;
+  border: 2px solid #ff4d4d;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: #ff4d4d;
+}
+.hero {
+  height: 100vh;
+  width: 100%;
+  /* Replace 'your-image-path.jpg' with the path to the image I generated */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('../../assets/hero-bg.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.highlight {
+  color: #ff4d4d; /* Matching your project card theme */
+}
+
+.cta-button {
+  padding: 12px 24px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: #cc0000;
+  transform: scale(1.05);
+}

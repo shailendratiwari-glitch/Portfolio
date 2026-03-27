@@ -1,0 +1,42 @@
+.projects-section {
+  padding: 80px 5%;
+ background: linear-gradient(285deg, #ec2828, #2c2c2b);
+  text-align: center; /* Centers the "My Projects" title */
+}
+
+.projects-grid {
+  display: grid;
+  /* auto-fit creates as many columns as will fit, 
+     minmax ensures they don't get smaller than 300px */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px; /* Increased gap for a cleaner look */
+  margin-top: 40px;
+}
+
+.project-card {
+  background: #252525;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  
+  /* REMOVED: grid-template-columns from here. 
+     A card is a grid ITEM, not the grid CONTAINER. */
+     
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Keeps images/content inside the rounded corners */
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  border-color: #ff4d4d;
+}
+
+/* Suggested addition for images inside cards */
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
