@@ -27,13 +27,26 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: all 0.3s ease ;}
+  .hero-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* Remove any max-width: 1200px or similar lines */
+}
+
+.navbar {
+  width: 100%;
+  padding: 1rem 5%; /* Use percentage padding to keep content away from extreme edges if desired */
+}
 
   .body {
   background-color: var(--bg-color);
   color: var(--text-color);
   margin: 0;
   -webkit-font-smoothing: antialiased;
-}
+  width: 100%;
+  }
 h1, h2, h3 {
   letter-spacing: -0.02em;
 }
@@ -50,10 +63,11 @@ h1, h2, h3 {
   border-radius: 10px;
 }
 
-  @media (max-width: 1024px) {
-    font-size: 16px;}
-
-
+@media (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;

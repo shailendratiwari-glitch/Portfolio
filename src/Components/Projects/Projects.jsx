@@ -3,6 +3,7 @@ import './Projects.css';
 import school from '../../assets/school.png';
 import real from '../../assets/real.png';
 import weather from '../../assets/weather.png'
+import clinic from '../../assets/clinic.png'
 
 const Projects = () => {
   const myProjects = [
@@ -17,8 +18,8 @@ const Projects = () => {
       id: 2, 
       title: "CarePoint Pharmacy", 
       desc: "A custom medical inventory and pharmacy management system designed for clinic efficiency and stock tracking.", 
-      image: "/carepoint-thumb.jpg", 
-      link: "#" 
+      image: clinic, 
+      link: "https://clinic-sooty-ten.vercel.app/" 
     },
     { 
       id: 3, 

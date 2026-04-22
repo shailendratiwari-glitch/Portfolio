@@ -1,42 +1,111 @@
+/* Projects.css */
+
 .projects-section {
-  padding: 80px 5%;
- background: linear-gradient(285deg, #ec2828, #2c2c2b);
-  text-align: center; /* Centers the "My Projects" title */
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(125deg, #ec2828, #2c2c2b);
+
 }
 
+.projects-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Optional: Underline effect for the title */
+.projects-section h2::after {
+  content: '';
+  width: 50%;
+  height: 4px;
+  background-color: #007bff; /* Change to your primary color */
+  position: absolute;
+  bottom: -10px;
+  left: 25%;
+  border-radius: 2px;
+}
+
+/* Grid Layout */
 .projects-grid {
   display: grid;
-  /* auto-fit creates as many columns as will fit, 
-     minmax ensures they don't get smaller than 300px */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px; /* Increased gap for a cleaner look */
+  gap: 30px;
   margin-top: 40px;
 }
 
+/* Project Card Styling */
 .project-card {
-  background: #252525;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #333;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-  
-  /* REMOVED: grid-template-columns from here. 
-     A card is a grid ITEM, not the grid CONTAINER. */
-     
+  background: linear-gradient(125deg, #f56262, #f3f3ee);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Keeps images/content inside the rounded corners */
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  border-color: #ff4d4d;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Suggested addition for images inside cards */
-.project-card img {
+/* Image Handling */
+.project-img {
   width: 100%;
-  height: auto;
-  border-radius: 4px;
-  margin-bottom: 15px;
+  height: 200px;
+  object-fit: cover; /* Ensures images don't stretch */
+  border-bottom: 1px solid #272424;
+}
+
+/* Content inside the card */
+.project-info {
+  padding: 20px;
+  flex-grow: 1; /* Pushes the link to the bottom if text lengths vary */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.project-info p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Button/Link Styling */
+.project-link {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+}
+
+.project-link:hover {
+  background-color: #0056b3;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .projects-section h2 {
+    font-size: 2rem;
+  }
 }

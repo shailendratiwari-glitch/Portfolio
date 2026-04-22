@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './About.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import pro from '../../assets/profile1.jpeg'
 
 const About = () => {
   useEffect(() => {
@@ -15,7 +16,7 @@ const About = () => {
         <div className="about-image" data-aos="fade-right">
           <div className="image-border">
              {/* Replace with your actual image path */}
-            <img src="/your-profile-pic.jpg" alt="Shailendra Tiwari" />
+            <img src={pro} alt="Shailendra Tiwari" />
           </div>
         </div>
 
@@ -23,8 +24,8 @@ const About = () => {
         <div className="about-content" data-aos="fade-left">
           <h2 className="section-title">About <span>Me</span></h2>
           <p className="description">
-            I am a 20-year-old **Full Stack Developer** currently in my 3rd year 
-            pursuing a **Bachelor of Computer Applications (BCA)**. 
+            I am a 20-year-old Full Stack Developer currently in my 3rd year 
+            pursuing a Bachelor of Computer Applications (BCA). 
             Based in Kanpur, I specialize in building scalable web applications 
             using the MERN stack and Python/Django.
           </p>
