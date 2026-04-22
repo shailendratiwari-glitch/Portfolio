@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import './App.css';
 import About from './Components/About/About';
 
+
 function App() {
   useEffect(() => {
     Aos.init({ duration: 1000, once: true });
